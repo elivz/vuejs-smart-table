@@ -1,5 +1,5 @@
 export function doSort (toSort, sortKey, customSort, sortOrder) {
-  let local = [...toSort]
+  let local = Array.from(toSort)
 
   return local.sort((a, b) => {
     if (typeof customSort === 'function') {
@@ -66,7 +66,7 @@ export function doPaginate (toPaginate, pageSize, currentPage) {
   const start = (currentPage - 1) * pageSize
   const end = start + pageSize
 
-  return [...toPaginate].slice(start, end)
+  return Array.from(toPaginate).slice(start, end)
 }
 
 export function calculateTotalPages (totalItems, pageSize) {

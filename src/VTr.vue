@@ -42,9 +42,7 @@ export default {
       return this.isSelected ? this.state.selectedClass : ''
     },
     style () {
-      return {
-        ...(!this.state.customSelection ? { cursor: 'pointer' } : {})
-      }
+      return !this.state.customSelection ? { cursor: 'pointer' } : {};
     }
   },
   methods: {
